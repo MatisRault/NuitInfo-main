@@ -1,0 +1,479 @@
+@import url("../global.css");
+
+body {
+  margin: 0;
+  background-color: var(--clr-bgcolor);
+  overflow-x: hidden;
+  font-family: var(--fnt-font-contenu);
+  font-family: var(--fnt-font-title);
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: var(--clr-primary);
+  height: 7rem;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo-text {
+  fill: var(--clr-fontcolor);
+  color: var(--clr-fontcolor);
+}
+.accesibility {
+  cursor: pointer;
+
+  width: 10rem;
+  height: 2rem;
+  background-color: var(--clr-secondary);
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clr-fontcolor);
+}
+
+.color-icon {
+  fill: var(--clr-fontcolor);
+  color: var(--clr-fontcolor);
+}
+
+.first-screen {
+  background-color: var(--clr-bgcolor);
+  height: 100vh;
+  width: 100vw;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.redirection {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--clr-fontcolor);
+  height: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+
+.carte {
+  
+  display: flex;
+  width: 20rem;
+  height: 33rem;
+  border-radius: 1rem;
+  border: 4px solid var(--clr-fontcolor);
+}
+.img-container {
+  position: relative;
+  display: inline-block; /* Si nécessaire pour positionner correctement */
+}
+.img-mobile {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.ping-icon {
+  cursor: pointer;
+
+  position: absolute;
+  top: 12rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 8rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 6rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon2 {
+  cursor: pointer;
+  position: absolute;
+  top: 18rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 21rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 6rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon3 {
+  cursor: pointer;
+
+  position: absolute;
+  top: 20rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 37rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 6rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+#pcnuit {
+  display: none;
+}
+#mobilenuit {
+  display: none;
+}
+
+
+.ping-icon4 {
+  cursor: pointer;
+  
+  position: absolute;
+  top: 20rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 4rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 6rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon5 {
+  cursor: pointer;
+  position: absolute;
+  top: 19rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 30rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 6rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon6 {
+  cursor: pointer;
+
+  position: absolute;
+  top: 20rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 37rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 6rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+
+.ping-icon7 {
+  cursor: pointer;
+  
+  position: absolute;
+  top: 15rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 3rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 4rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon8 {
+  cursor: pointer;
+  position: absolute;
+  top: 16rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 12rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 4rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon9 {
+  cursor: pointer;
+
+  position: absolute;
+  top: 20.5rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 15.5rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 4rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon10 {
+  cursor: pointer;
+  
+  position: absolute;
+  top: 22rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 0.5rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 4rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon11 {
+  cursor: pointer;
+  position: absolute;
+  top: 14rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 6rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 4rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+.ping-icon12 {
+  cursor: pointer;
+
+  position: absolute;
+  top: 18.5rem; /* Ajustez la valeur de top selon votre besoin */
+  left: 15.5rem; /* Ajustez la valeur de left selon votre besoin */
+  font-size: 4rem; /* Ajustez la taille de l'icône */
+  color: red; /* Ajustez la couleur de l'icône */
+}
+
+
+.carte2 {
+  display: none;
+  width: 60rem;
+  height: 33rem;
+  background-color: white;
+  border-radius: 1rem;
+  border: 4px solid var(--clr-fontcolor);
+}
+
+.second-screen {
+  background-color: var(--clr-secondary);
+  height: 48rem;
+  width: 100vw;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.stat-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-fontcolor);
+  font-style: bold;
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  color: var(--clr-fontcolor);
+  font-style: bold;
+  gap: 1rem;
+  height: 5rem;
+  justify-items: center;
+  align-items: center;
+}
+.text {
+  color: var(--clr-fontcolor);
+  font-size: 3.5rem;
+}
+.text-2 {
+  color: var(--clr-fontcolor);
+  font-size: 2rem;
+  margin-top: -0.5rem;
+  font-family: "Arial", sans-serif;
+}
+.text-title {
+  color: var(--clr-custom);
+  font-size: 2.5rem;
+}
+
+.third-screen {
+  background-color: var(--clr-bgcolor);
+  height: 47rem;
+  width: 96vw;
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+swiper-container {
+  width: 240px;
+  height: 320px;
+}
+
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+swiper-slide:nth-child(1n) {
+  background-color: rgb(255, 255, 255);
+}
+
+swiper-slide:nth-child(2n) {
+    background-color: rgb(255, 255, 255);
+}
+
+swiper-slide:nth-child(3n) {
+    background-color: rgb(255, 255, 255);
+}
+
+swiper-slide:nth-child(4n) {
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.cardbtn {
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 1rem;
+  background-color:#17254b;
+  color: #fff;
+  text-decoration: none;
+  font-size: medium;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-assoc {
+  width: 10rem;
+
+}
+.text-assoc {
+
+  color:#17254b ;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dropdown-acces{
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 20rem;
+  width: 100vw;
+  background-color: var(--clr-secondary);
+  display: none;
+  text-align: center;
+  
+  
+}
+.dropdown-acces2{
+  margin-top: -0.8rem;
+z-index: -10;
+  position: fixed;
+  height: 20rem;
+  width: 10rem;
+  background-color: var(--clr-secondary);
+  display: none;
+  text-align: center;
+  border: 0.2rem  var(--clr-fontcolor);
+  box-shadow: inset;
+
+  
+}
+
+.accesibility-2{
+  cursor: pointer;
+  margin-top: 1rem;
+  width: auto;
+  height: 2rem;
+  background-color: var(--clr-secondary );
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--clr-fontcolor);
+
+}
+
+.crossclose{
+  color:var(--clr-fontcolor); 
+  
+}
+
+.redirection-2{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-fontcolor);
+  height: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  margin-left: -5rem;
+  
+}
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-primary);
+  height: 6rem;
+  width: 100vw;
+  margin-top: 7rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: var(--clr-fontcolor);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.footer-contenu{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 1rem;
+}
+
+.footer-contenu a{
+  color: var(--clr-bgcolor);
+}
+
+
+
+.Settings-mobile{
+  display: flex;
+}
+
+.Settings{
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .redirection{
+    display: none ;
+  }
+  .redirection-2{
+    display: flex ;
+  }
+  .Settings{
+    display: flex;
+  }
+
+  .Settings-mobile{
+    display: none;
+  }
+  .carte{
+    display: none;
+  }
+  .carte2{
+    display: flex;
+  }
+
+
+}
+
+.dropdown-acces-2{
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 20rem;
+  width: 100vw;
+  display: none;
+  text-align: center;
+}
+
+
+
+

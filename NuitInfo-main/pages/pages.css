@@ -1,0 +1,10 @@
+@import url(../global.css);
+
+body{
+    height: 100%;
+    background-color: var(--clr-primary);
+    color: var(--clr-bgcolor);
+    font-family: var(--fnt-font-contenu);
+    font-family: var(--fnt-font-title);
+
+}

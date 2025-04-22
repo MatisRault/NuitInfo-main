@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylevraifaux.css">
+    <script src="./vraifaux.js"></script>
+</head>
+
+<body>
+    <div id="quizz">
+        <div id="divquestion">
+            <h1 id="question" style="color: black; width: 90%; text-align: center;"></h1>
+            <a id="retour" href="./../index.html"
+                style="display: none; text-decoration: none; color: black; margin-top: 10vh;">Retour à
+                l'accueil</a>
+        </div>
+        <div id="reponses">
+            <button style="background-color: green;" value="true" class="btnrep"
+                onclick="checkAnswer(true)">VRAI</button>
+            <button style="background-color: red;" value="false" class="btnrep"
+                onclick="checkAnswer(false)">FAUX</button>
+        </div>
+    </div>
+    <div id="resultat" style="display:none;">
+        <div id="divresult">
+            <h1 id="comparatif"></h1>
+            <h3 id="expl"></h3>
+            <button id="cancel" onclick="cancelFenetre()">Prochaine question</button>
+        </div>
+    </div>
+</body>

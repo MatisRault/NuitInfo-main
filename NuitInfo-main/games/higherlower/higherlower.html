@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="higherlower.css">
+  <title>Higher/Lower CO2 Emissions Game</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <h1>Higher/Lower CO2 Emissions Game</h1>
+  <div class="container">
+    <div class="box" id="leftBox">
+      <h2>Aliment 1</h2>
+      <p>Emissions de CO2: <span id="leftCO2"></span> kg</p>
+    </div>
+    <div class="box" id="rightBox">
+      <h2>Aliment 2</h2>
+      <p>Emissions de CO2: <span id="rightCO2">?</span> kg</p>
+    </div>
+  </div>
+  <div class="container">
+    <button onclick="checkAnswer('higher')">Higher</button>
+    <button onclick="checkAnswer('lower')">Lower</button>
+  </div>
+  <p>Score: <span id="score">0</span></p>
+
+  <script src="higherlower.js"></script>
+</body>
+</html>

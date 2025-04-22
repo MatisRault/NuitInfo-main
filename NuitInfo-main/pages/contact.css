@@ -1,0 +1,37 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrer les cartes horizontalement */
+}
+.boutonRetour{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 20%;
+    border-radius: 10px;
+    background-color: var(--clr-bgcolor);
+    font-family: var(--fnt-font-contenu);
+    display: flex;
+    justify-content: center;
+    font-size: 110%;
+}
+.carte-contact {
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: calc(33.33% - 20px); /* Largeur égale pour 3 cartes par ligne avec un peu d'espace entre */
+    margin: 10px; /* Espace entre les cartes */
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.carte-contact-content{
+    width: 100%;
+    padding-bottom: 1rem;
+}

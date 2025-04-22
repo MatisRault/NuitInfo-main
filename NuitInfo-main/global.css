@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@font-face {
+  font-family: "Dyslexie";
+  src: url("./public/fonts/OpenDyslexic-Regular.otf") format("opentype");
+}
+
+:root {
+  --clr-primary: #008040;
+  --clr-bgcolor: #ccf8c4;
+  --clr-secondary: #37bd3d;
+  --clr-fontcolor: #17254b;
+  --clr-custom: #ccf8c4;
+  --fnt-font-title: "Archivo Black", sans-serif;
+  --fnt-font-contenu: "Archivo Black", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-fontcolor);
+}
+
+
+.default {
+  --fnt-font-title: "Archivo Black", sans-serif;
+  --fnt-font-contenu: "Archivo Black", sans-serif;
+}
+
+.protonopia {
+  --clr-primary: #7a6e3d; /* Equivalent au clr-light-primary pour la protanopie */
+  --clr-bgcolor: #fbebbd; /* Equivalent au clr-light-secondary pour la protanopie. */
+  --clr-custom: #ffd700;
+
+  --clr-secondary: #fbebbd; /* Equivalent au clr-light-fontcolor pour la protanopie */
+  --clr-fontcolor: #1a2a4d; /* Equivalent au clr-light-button pour la protanopie */
+}
+
+.deuteranopia {
+  --clr-primary: #856949; /* Equivalent au clr-light-primary pour la deutéranopie */
+  --clr-bgcolor: #ffe7db; /* Equivalent au clr-light-secondary pour la deutéranopie */
+  --clr-custom: #856949;
+
+  --clr-secondary: #ffe7db; /* Equivalent au clr-light-fontcolor pour la deutéranopie */
+  --clr-fontcolor: #0e2c4b; /* Equivalent au clr-light-button pour la deutéranopie */
+}
+
+.tritanopia {
+  --clr-primary: #0e2c4b; /* Equivalent au clr-light-navbar pour la tritanopie */
+  --clr-bgcolor: #0e2c4b; /* Equivalent au clr-light-primary pour la tritanopie */
+  --clr-custom: #daeeff;
+
+  --clr-secondary: #62afbd; /* Equivalent au clr-light-secondary pour la tritanopie */
+  --clr-fontcolor: #daeeff; /* Equivalent au clr-light-fontcolor pour la tritanopie */
+}
+
+.dark-mode {
+  --clr-primary: #17254b;
+  --clr-bgcolor: #898787;
+  --clr-custom: #898787;
+
+  --clr-secondary: #333333;
+  --clr-fontcolor: #ffffff;
+}
+
+.dyslexia {
+  --fnt-font-contenu: "Dyslexie", sans-serif;
+  --fnt-font-title: "Dyslexie", sans-serif;
+}

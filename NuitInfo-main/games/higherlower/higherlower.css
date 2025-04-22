@@ -1,60 +1,156 @@
-    /* Styles CSS pour les boxes */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        
-      }
-      h1 {
-        color: #2ecc71;
-      }
-      .container {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
-        /* gap: 2rem; */
-      }
-      .box {
-        border: 1px solid #2ecc71;
-        padding: 10px;
-        width: 45%;
-        text-align: center;
-        background-color: #d0f0c0;
-        border-radius: 8px;
-  
-      }
-      img {
-        max-width: 100px;
-        max-height: 100px;
-        border-radius: 50%;
-      }
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        margin: 0 10px;
-        cursor: pointer;
-        background-color: #2ecc71;
-        color: white;
-        transition: background-color 0.3s ease;
-      }
-      button:hover {
-        background-color: #27ae60;
-      }
-      p {
-        color: #555;
-      }
-      span {
-        font-weight: bold;
-      }
-      #score {
-        color: #2ecc71;
-        font-size: 20px;
-      }
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+}
+
+/* Titre */
+h1 {
+  color: #388e3c;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Conteneurs */
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Boîtes d'action */
+.box {
+  flex: 1 1 45%;
+  background: #c8e6c9;
+  border: 2px solid #66bb6a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+/* Image (si ajoutée plus tard) */
+img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+/* Texte CO2 */
+p {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+span {
+  font-weight: bold;
+  color: #1b5e20;
+}
+
+/* Score */
+#score {
+  font-size: 1.5rem;
+  color: #388e3c;
+  margin-top: 1rem;
+}
+
+/* Boutons */
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .box {
+    flex: 1 1 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 80%;
+    margin-top: 0.5rem;
+  }
+}
+
+#feedback {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeSlide 0.6s ease-in-out;
+}
+
+#feedback.success {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+  border: 2px solid #388e3c;
+}
+
+#feedback.error {
+  background-color: #ef9a9a;
+  color: #b71c1c;
+  border: 2px solid #e53935;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

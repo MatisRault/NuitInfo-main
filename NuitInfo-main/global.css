@@ -65,3 +65,13 @@ a {
   --fnt-font-contenu: "Dyslexie", sans-serif;
   --fnt-font-title: "Dyslexie", sans-serif;
 }
+
+.stat svg{
+  height: 49px;
+  width: 49px;
+}
+.stat img{
+  height: 49px;
+  width: 49px;
+}
+

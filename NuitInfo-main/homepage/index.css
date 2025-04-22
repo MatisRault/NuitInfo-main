@@ -1,487 +1,441 @@
-@import url("../global.css");
+/* Variables de couleurs et polices */
+:root {
+  --clr-primary: #2e7d32; /* Vert foncé */
+  --clr-secondary: #8bc34a; /* Vert clair */
+  --clr-accent: #ffd54f; /* Jaune */
+  --clr-bgcolor: #f9fbf7; /* Fond légèrement crème */
+  --clr-fontcolor: #263238; /* Texte foncé */
+  --clr-custom: #1b5e20; /* Vert très foncé pour titres */
+  --fnt-font-title: 'Montserrat', sans-serif;
+  --fnt-font-contenu: 'Open Sans', sans-serif;
+}
+
+/* Importation des polices et reset */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0;
   background-color: var(--clr-bgcolor);
-  overflow-x: hidden;
   font-family: var(--fnt-font-contenu);
-  font-family: var(--fnt-font-title);
+  color: var(--clr-fontcolor);
+  overflow-x: hidden;
 }
+
+/* Navigation */
 .navbar {
   position: fixed;
   top: 0;
+  width: 100%;
+  height: 5rem;
   background-color: var(--clr-primary);
-  height: 7rem;
-  width: 100vw;
   display: flex;
-  justify-content: space-around;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  display: flex;
-  justify-items: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 2rem;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 100;
 }
 
-.logo{
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
   width: 40px;
   height: auto;
 }
 
 .logo-text {
-  fill: var(--clr-fontcolor);
-  color: var(--clr-fontcolor);
   width: 100px;
   height: auto;
-  padding-bottom: 11px;
+  padding-bottom: 8px;
+  fill: white;
+  color: white;
 }
+
+.redirection, .redirection-2 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.redirection a, .redirection-2 a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.redirection a:hover, .redirection-2 a:hover {
+  color: var(--clr-accent);
+}
+
+.redirection-2 {
+  display: none;
+}
+
+/* Bouton Settings */
 .accesibility {
   cursor: pointer;
-
-  width: 10rem;
-  height: 2rem;
   background-color: var(--clr-secondary);
-  border-radius: 4rem;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  color: var(--clr-fontcolor);
+  color: white;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.accesibility:hover {
+  background-color: var(--clr-custom);
 }
 
 .color-icon {
-  fill: var(--clr-fontcolor);
-  color: var(--clr-fontcolor);
+  fill: white;
+  color: white;
 }
 
+/* Menu déroulant */
+.dropdown-acces, .dropdown-acces2 {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  width: 12rem;
+  background-color: var(--clr-secondary);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.accesibility-2 {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.accesibility-2:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.crossclose {
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 0.5rem;
+}
+
+/* First screen - Map */
 .first-screen {
-  background-color: var(--clr-bgcolor);
-  height: 100vh;
-  width: 100vw;
-  margin-top: 7rem;
+  margin-top: 5rem;
+  padding: 2rem 0;
+  min-height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
-.redirection {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
-  color: var(--clr-fontcolor);
-  height: 1.8rem;
-  text-decoration: none;
-  text-align: center;
-  gap: 2rem;
-  font-size: 1.5rem;
+
+.carte, .carte2 {
+  position: relative;
+  border: 3px solid var(--clr-primary);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.carte:hover, .carte2:hover {
+  transform: translateY(-5px);
 }
 
 .carte {
-  
-  display: flex;
   width: 20rem;
-  height: 33rem;
-  border-radius: 1rem;
-  border: 4px solid var(--clr-fontcolor);
+  height: auto;
 }
+
+.carte2 {
+  width: 60rem;
+  height: auto;
+  display: none;
+}
+
 .img-container {
   position: relative;
-  display: inline-block; /* Si nécessaire pour positionner correctement */
+  width: 100%;
+  height: 100%;
 }
+
 .img-mobile {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  max-width: 100%;
-  border-radius: 1rem;
+  display: block;
 }
 
-.ping-icon {
-  cursor: pointer;
-
+/* Location pins */
+[class^="ping-icon"] {
   position: absolute;
-  top: 12rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 8rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 6rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon2 {
-  cursor: pointer;
-  position: absolute;
-  top: 18rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 21rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 6rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon3 {
-  cursor: pointer;
-
-  position: absolute;
-  top: 20rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 37rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 6rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-#pcnuit {
-  display: none;
-}
-#mobilenuit {
-  display: none;
+  color: var(--clr-accent);
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-
-.ping-icon4 {
-  cursor: pointer;
-  
-  position: absolute;
-  top: 20rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 4rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 6rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon5 {
-  cursor: pointer;
-  position: absolute;
-  top: 19rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 30rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 6rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon6 {
-  cursor: pointer;
-
-  position: absolute;
-  top: 20rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 37rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 6rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
+[class^="ping-icon"]:hover {
+  transform: scale(1.2);
+  color: #ff6f00;
 }
 
-.ping-icon7 {
-  cursor: pointer;
-  
-  position: absolute;
-  top: 15rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 3rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon8 {
-  cursor: pointer;
-  position: absolute;
-  top: 16rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 12rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon9 {
-  cursor: pointer;
-
-  position: absolute;
-  top: 20.5rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 15.5rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon10 {
-  cursor: pointer;
-  
-  position: absolute;
-  top: 22rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 0.5rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon11 {
-  cursor: pointer;
-  position: absolute;
-  top: 14rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 6rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-.ping-icon12 {
-  cursor: pointer;
-
-  position: absolute;
-  top: 18.5rem; /* Ajustez la valeur de top selon votre besoin */
-  left: 15.5rem; /* Ajustez la valeur de left selon votre besoin */
-  font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: red; /* Ajustez la couleur de l'icône */
-}
-
-
-.carte2 {
-  display: none;
-  width: 60rem;
-  height: 33rem;
-  background-color: white;
-  border-radius: 1rem;
-  border: 4px solid var(--clr-fontcolor);
-}
-
+/* Second screen - Stats */
 .second-screen {
   background-color: var(--clr-secondary);
-  height: 48rem;
-  width: 100vw;
-  margin-top: 7rem;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
+
+.text-title {
+  color: white;
+  font-family: var(--fnt-font-title);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.text-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--clr-accent);
+}
+
 .stat-parent {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: var(--clr-fontcolor);
-  font-style: bold;
-  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-parent:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .stat {
   display: flex;
-  flex-direction: row;
-  color: var(--clr-fontcolor);
-  font-style: bold;
-  gap: 1rem;
-  height: 5rem;
-  justify-items: center;
   align-items: center;
-}
-.text {
-  color: var(--clr-fontcolor);
-  font-size: 3.5rem;
-}
-.text-2 {
-  color: var(--clr-fontcolor);
-  font-size: 2rem;
-  margin-top: -0.5rem;
-  font-family: "Arial", sans-serif;
-}
-.text-title {
-  color: var(--clr-custom);
-  font-size: 2.5rem;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
+.stat img {
+  width: 2.5rem;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.text {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: var(--fnt-font-title);
+}
+
+.text-2 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Third screen - Associations */
 .third-screen {
+  padding: 4rem 1rem;
   background-color: var(--clr-bgcolor);
-  height: 47rem;
-  width: 96vw;
-  margin-top: 20rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 250px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
-swiper-container {
-  width: 240px;
-  height: 320px;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  font-size: 22px;
+.logo-assoc {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+.text-assoc {
+  color: var(--clr-primary);
   font-weight: bold;
-  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: var(--fnt-font-title);
 }
-
-swiper-slide:nth-child(1n) {
-  background-color: rgb(255, 255, 255);
-}
-
-swiper-slide:nth-child(2n) {
-    background-color: rgb(255, 255, 255);
-}
-
-swiper-slide:nth-child(3n) {
-    background-color: rgb(255, 255, 255);
-}
-
-swiper-slide:nth-child(4n) {
-    background-color: rgb(255, 255, 255);
-}
-
-
 
 .cardbtn {
-  display: flex;
-  flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  height: 3rem;
-  width: 10rem;
-  border-radius: 1rem;
-  background-color:#17254b;
-  color: #fff;
-  text-decoration: none;
-  font-size: medium;
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-.logo-assoc {
-  width: 10rem;
-
-}
-.text-assoc {
-
-  color:#17254b ;
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-.dropdown-acces{
-  top: 0;
-  left: 0;
-  position: fixed;
-  height: 20rem;
-  width: 100vw;
-  background-color: var(--clr-secondary);
-  display: none;
-  text-align: center;
-  
-  
-}
-.dropdown-acces2{
-  margin-top: -0.8rem;
-z-index: -10;
-  position: fixed;
-  height: 20rem;
-  width: 10rem;
-  background-color: var(--clr-secondary);
-  display: none;
-  text-align: center;
-  border: 0.2rem  var(--clr-fontcolor);
-  box-shadow: inset;
-
-  
-}
-
-.accesibility-2{
-  cursor: pointer;
-  margin-top: 1rem;
-  width: auto;
-  height: 2rem;
-  background-color: var(--clr-secondary );
-  border-radius: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  color: var(--clr-fontcolor);
-
-}
-
-.crossclose{
-  color:var(--clr-fontcolor); 
-  
-}
-
-.redirection-2{
-  display: none;
-  justify-content: center;
-  align-items: center;
-  color: var(--clr-fontcolor);
-  height: 1.8rem;
-  text-decoration: none;
-  text-align: center;
-  gap: 2rem;
-  font-size: 1.5rem;
-  margin-left: -5rem;
-  
-}
-
-
-.footer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: var(--clr-primary);
-  height: 6rem;
-  width: 100vw;
-  margin-top: 7rem;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.cardbtn:hover {
+  background-color: var(--clr-custom);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--clr-primary);
+  padding: 1.5rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  color: var(--clr-fontcolor);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.footer-contenu{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 10rem;
-  margin-top: 1rem;
 }
 
-.footer-contenu a{
-  color: var(--clr-bgcolor);
-}
-
-
-
-.Settings-mobile{
+.footer-contenu {
   display: flex;
+  gap: 3rem;
 }
 
-.Settings{
-  display: none;
+.footer-contenu a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
-@media only screen and (min-width: 992px) {
-  .redirection{
-    display: none ;
-  }
-  .redirection-2{
-    display: flex ;
-  }
-  .Settings{
-    display: flex;
-  }
 
-  .Settings-mobile{
+.footer-contenu a:hover {
+  color: var(--clr-accent);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  
+  .footer-contenu {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .stat-parent {
+    padding: 1rem;
+  }
+  
+  .text {
+    font-size: 2.5rem;
+  }
+  
+  .text-2 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .redirection {
     display: none;
   }
-  .carte{
-    display: none;
-  }
-  .carte2{
+  
+  .redirection-2 {
     display: flex;
   }
-
-
+  
+  .Settings {
+    display: flex;
+  }
+  
+  .Settings-mobile {
+    display: none;
+  }
+  
+  .carte {
+    display: none;
+  }
+  
+  .carte2 {
+    display: block;
+  }
 }
 
-.dropdown-acces-2{
-  top: 0;
-  left: 0;
-  position: fixed;
-  height: 20rem;
-  width: 100vw;
-  display: none;
-  text-align: center;
+/* Animations pour les éléments interactifs */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-
-
-
+.ping-icon:hover,
+.ping-icon2:hover,
+.ping-icon3:hover,
+.ping-icon4:hover,
+.ping-icon5:hover,
+.ping-icon6:hover,
+.ping-icon7:hover,
+.ping-icon8:hover,
+.ping-icon9:hover,
+.ping-icon10:hover,
+.ping-icon11:hover,
+.ping-icon12:hover {
+  animation: pulse 1.5s infinite;
+}

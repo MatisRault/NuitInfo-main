@@ -1,7 +1,7 @@
 /* Variables de couleurs et polices */
 :root {
-  --clr-primary: #2e7d32; /* Vert foncé */
-  --clr-secondary: #8bc34a; /* Vert clair */
+  --clr-primary: #60afc8; /* Vert foncé */
+  --clr-secondary: #1e5a7c; /* Vert clair */
   --clr-accent: #ffd54f; /* Jaune */
   --clr-bgcolor: #f9fbf7; /* Fond légèrement crème */
   --clr-fontcolor: #263238; /* Texte foncé */

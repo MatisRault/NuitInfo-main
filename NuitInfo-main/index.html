@@ -18,9 +18,9 @@
             <img class="logo-text"src="./public/img/logotittle.png" alt="EcoQuest-text">
         </div>
         <div class="redirection-2">
-            <a href="#game"><p>Game</p></a>
-            <a href="#stats"><p>Stats</p></a>
-            <a href="#donate"><p>Donate</p></a>
+            <a href="#game"><p>WattUp</p></a>
+            <a href="#stats"><p>Chiffres</p></a>
+            <a href="#donate"><p>Donations</p></a>
         </div>
         <div>
             <div class="Settings" onclick="openMenu2()">
@@ -96,51 +96,37 @@
             
             
         </nav>
-        <div class="first-screen">
+        <div class="first-screen" id="game">
             <div class="redirection">
                 <p >Game</p>
                 <p >Stats</p>
                 <p >Chatbot</p>
             </div>
             
-            <div class="carte">
-                <div class="img-container">
-                    <img id='carte' class="img-mobile" src="../public/img/cartemobile.png" alt="">
-                    <div id="mobilejour">
-                        <i onclick="(redirectTo('games/vraifaux/vraifaux.html'))" class="fa-solid fa-location-dot ping-icon7"></i>
-                        <i onclick="(redirectTo('games/higherlower/higherlower.html'))" class="fa-solid fa-location-dot ping-icon8"></i>
-                        <i onclick="(redirectTo('games/trashgame/trashgame.html'))" class="fa-solid fa-location-dot ping-icon9"></i>
-    
+            <div class="info">
+
+                <section class="wattup-section">
+                    <div class="wattup-container">
+                        <img class="fullLogo" src="./public/img/fullLogo.png" alt="">
+                        <h2 class="wattup-subtitle">Sensibilisez, économisez, agissez</h2>
+                        <p class="wattup-description">
+                        Mieux comprendre sa consommation électrique, c’est <strong>économiser</strong> tout en <strong>protégeant la planète</strong>.
+                        WattUp vous guide pas à pas vers un avenir plus responsable.
+                        </p>
+                        <ul class="wattup-benefits">
+                        <li>✅ Jouez pour découvrir vos habitudes de consommation</li>
+                        <li>💶 Relevez des défis pour apprendre à économiser</li>
+                        <li>🌱 Comprenez l’impact de chaque geste au quotidien</li>
+                        </ul>
+                        <button class="wattup-cta">Commencez dès maintenant</button>
+                        <button class="wattup-cta">Commencez dès maintenant</button>
                     </div>
-                    <div id="mobilenuit">
-                        <i onclick="(redirectTo('games/trashgame/trashgame.html'))" class="fa-solid fa-location-dot ping-icon10"></i>
-                        <i onclick="(redirectTo('games/higherlower/higherlower.html'))" class="fa-solid fa-location-dot ping-icon11"></i>
-                        <i onclick="(redirectTo('games/vraifaux/vraifaux.html'))" class="fa-solid fa-location-dot ping-icon12"></i>
-    
-                    </div>
-                   
-                </div>
+                    </section>
             </div>
-            <div class="carte2">
-                <div class="img-container">
-                    <img id='carte2' class="img-mobile" src="../public/img/cartepc.jpg" alt="">
-                    <div id="pcjour">
-                        <i onclick="(redirectTo('games/vraifaux/vraifaux.html'))" class="fa-solid fa-location-dot ping-icon"></i>
-                        <i onclick="(redirectTo('games/higherlower/higherlower.html'))" class="fa-solid fa-location-dot ping-icon2"></i>
-                        <i onclick="(redirectTo('games/trashgame/trashgame.html'))"  class="fa-solid fa-location-dot ping-icon3"></i>
-                    </div>
-                    <div id="pcnuit">
-                        <i onclick="(redirectTo('games/vraifaux/vraifaux.html'))" class="fa-solid fa-location-dot ping-icon4"></i>
-                        <i onclick="(redirectTo('games/higherlower/higherlower.html'))" class="fa-solid fa-location-dot ping-icon5"></i>
-                        <i onclick="(redirectTo('games/trashgame/trashgame.html'))"  class="fa-solid fa-location-dot ping-icon6"></i>
-                    </div>
-                    
 
 
-                </div>
-            </div>
         </div>
-        <div class="second-screen">
+        <div class="second-screen"  id="stats">
             <h1 class="text-title">Chiffres clés de 2024</h1>
             
             <div class="stat-parent">

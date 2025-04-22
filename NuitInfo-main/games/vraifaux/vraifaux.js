@@ -1,54 +1,54 @@
 var questionsList = [
     {
-        question: "Les énergies renouvelables sont plus chères à produire.",
+        question: "Les appareils en veille ne consomment pas d'électricité.",
         reponse: false,
-        explication: "Les progrès technologiques dans le domaine ont entraîné une baisse spectaculaire des coûts des énergies renouvelables. Ainsi, actuellement, que ce soit n'importe où dans le monde, aucune autre source de production électrique n'est aussi économiquement compétitive que l'énergie éolienne ou solaire pour de nouvelles installations."
+        explication: "Les appareils en veille peuvent représenter jusqu'à 11% de la consommation électrique d'un foyer. Un téléviseur en veille consomme environ 1 à 4 watts en continu, soit jusqu'à 35 kWh par an."
     },
     {
-        question: "Adopter un mode de vie écolo, ce serait revenir au Moyen Âge.",
+        question: "Un cycle de lave-vaisselle consomme plus d'électricité que de faire la vaisselle à la main.",
         reponse: false,
-        explication: "Le mode de vie écologique repose sur un ensemble d'innovations et d'améliorations du bien-être, qui relève d’un processus de progrès… et certainement pas d’un retour en arrière !"
+        explication: "Un lave-vaisselle moderne consomme en moyenne 1 à 1,5 kWh par cycle, tandis que la vaisselle à la main avec de l'eau chaude peut consommer jusqu'à 2,5 kWh, sans compter la consommation d'eau qui est 3 à 4 fois supérieure."
     },
     {
-        question: "Manger de la viande est mauvais pour l'environnement.",
+        question: "Charger son smartphone toute la nuit double sa consommation électrique.",
+        reponse: false,
+        explication: "Une fois chargé à 100%, un smartphone moderne réduit automatiquement sa consommation. Une charge complète ne consomme qu'environ 0,01 kWh, ce qui représente moins de 4 kWh par an pour une charge quotidienne."
+    },
+    {
+        question: "Les ampoules LED consomment 80% d'électricité en moins que les ampoules incandescentes.",
         reponse: true,
-        explication: "Il faut 30.000 à 60.000 litres d'eau pour faire 1 kg de viande de bœuf."
+        explication: "Une ampoule LED de 8W fournit la même luminosité qu'une ampoule incandescente de 60W, soit une économie d'énergie de plus de 80%. Sur sa durée de vie (15 000 à 25 000 heures), une LED peut économiser plus de 800 kWh d'électricité."
     },
     {
-        question: "Les panneaux solaires ne se valent pas tous.",
+        question: "Le chauffage électrique est la source de consommation électrique la plus importante dans un foyer français.",
         reponse: true,
-        explication: "Les panneaux solaires, en fonction de leur matière, peuvent avoir un rendement de 5 à 19% !"
+        explication: "Le chauffage représente en moyenne 62% de la consommation électrique d'un foyer français équipé en tout électrique, loin devant l'eau chaude (12%) et l'électroménager (10%)."
     },
     {
-        question: "Les panneaux solaires ne sont pas rentable du fait d'une durée de vie trop courte.",
+        question: "Un réfrigérateur récent consomme autant d'électricité qu'un modèle des années 1990.",
         reponse: false,
-        explication: "Les panneaux en eux-mêmes ont une durée de vie comprise entre 20 et 35 ans suivant les modèles."
+        explication: "Un réfrigérateur-congélateur moderne de classe A+++ consomme environ 150 kWh/an, alors qu'un modèle des années 1990 pouvait consommer jusqu'à 600 kWh/an, soit 4 fois plus."
     },
     {
-        question: "Un produit sans sucre contient tout de même du sucre.",
+        question: "Faire bouillir plus d'eau que nécessaire dans une bouilloire est négligeable en termes de consommation.",
+        reponse: false,
+        explication: "Chauffer 1 litre d'eau supplémentaire chaque jour pendant un an représente environ 110 kWh gaspillés, soit l'équivalent de la consommation d'une télévision LED pendant une année complète."
+    },
+    {
+        question: "L'énergie solaire photovoltaïque est toujours plus chère que l'électricité du réseau.",
+        reponse: false,
+        explication: "En 2023, le coût de production de l'électricité solaire a baissé à environ 0,04-0,06€/kWh dans de nombreuses régions, ce qui est inférieur au prix moyen de l'électricité résidentielle qui peut atteindre 0,20€/kWh en Europe."
+    },
+    {
+        question: "Un ordinateur portable consomme environ 80% moins d'électricité qu'un ordinateur de bureau équivalent.",
         reponse: true,
-        explication: "Selon la législation européenne, un produit portant la mention « sans sucre » peut contenir jusqu’à 0,5 g/100 de sucres, en plus de contenir des \"faux sucres\" ou édulcorants"
+        explication: "Un ordinateur portable standard consomme entre 20 et 50 watts en utilisation normale, contre 150 à 300 watts pour un ordinateur de bureau avec écran, soit une économie d'énergie de 70 à 85%."
     },
     {
-        question: "Un feu de cheminée ne pollue pas.",
-        reponse: false,
-        explication: "En plus de polluer l'air exterieur, les particules fines dégagées par les feux de cheminées polluent également l'intérieur de notre maison."
-    },
-    {
-        question: "Les sacs en plastique fin sont aujourd'hui tous biodégradables.",
-        reponse: false,
-        explication: "Dans la nature, le sac en plastique mettra très longtemps à se dégrader et aura de graves conséquences pour la faune et la flore. Il n'est également pas compostable."
-    },
-    {
-        question: "Avec un lave-linge de grande capacité, on fait moins de lessives.",
-        reponse: false,
-        explication: "Même performant, un lave-linge grande capacité, s'il ne convient pas à vos besoin tournera souvent sans être totalement remplies, entraînant un gaspillage d'énergies et d'eau."
-    },
-    {
-        question: "Les ampoules basse consommation ne s'adaptent pas à toutes les lampes et ne supportent pas les allumages répétés.",
-        reponse: false,
-        explication: "Les ampoules basse consommation s'adaptent à de nombreux luminaires, et certaines d'entre elles sont spécifiquement adaptés aux allumages fréquents.  "
-    },
+        question: "Le sèche-linge est l'un des appareils électroménagers les plus énergivores.",
+        reponse: true,
+        explication: "Un cycle de sèche-linge consomme en moyenne 3 à 4 kWh d'électricité, ce qui en fait l'un des appareils les plus énergivores de la maison, après le chauffage et le chauffe-eau."
+    }
 ];
 
 var currentQuestionIndex = 0;

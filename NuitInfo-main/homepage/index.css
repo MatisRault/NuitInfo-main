@@ -23,9 +23,17 @@ body {
   z-index: 100;
 }
 
+.logo{
+  width: 40px;
+  height: auto;
+}
+
 .logo-text {
   fill: var(--clr-fontcolor);
   color: var(--clr-fontcolor);
+  width: 100px;
+  height: auto;
+  padding-bottom: 11px;
 }
 .accesibility {
   cursor: pointer;

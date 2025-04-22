@@ -93,13 +93,13 @@ function checkAnswer(userAnswer) {
     if (userAnswer === correctAnswer) {
         compteurScore++;
         comparatifElement.textContent = "Bonne réponse!";
-        resultatElement.style.backgroundColor = 'green';
-        bouton.style.backgroundColor = 'green';
+        resultatElement.style.backgroundColor = '#8bc34a';
+        bouton.style.backgroundColor = '#8bc34a';
         compteurQuestion++
     } else {
         comparatifElement.textContent = "Mauvaise réponse!";
-        resultatElement.style.backgroundColor = 'red';
-        bouton.style.backgroundColor = 'red';
+        resultatElement.style.backgroundColor = 'rgb(255, 0, 0)';
+        bouton.style.backgroundColor = 'rgb(255, 0, 0)';
         compteurQuestion++
     }
 

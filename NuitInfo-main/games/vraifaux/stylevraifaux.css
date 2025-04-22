@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #37BD3D;
+    background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -12,20 +12,18 @@ body {
     #divquestion {
         width: 80vw;
         height: 60vh;
-        border: solid black;
         border-radius: 2vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: white;
+        background-color: #8bc34a;
     }
 
     #reponses {
         background-color: white;
         width: 80vw;
         height: 30vh;
-        border: solid black;
         border-radius: 2vw;
         display: flex;
         flex-direction: row;
@@ -46,7 +44,6 @@ body {
         width: 30vw;
         height: 20vh;
         color: white;
-        border: solid black 1px;
         border-radius: 3vw;
         font-size: 2.5vw;
     }
@@ -106,7 +103,6 @@ body {
     #divquestion {
         width: 95vw;
         height: 60vh;
-        border: solid black;
         border-radius: 2vw;
         display: flex;
         flex-direction: column;
@@ -140,7 +136,6 @@ body {
         background-color: white;
         width: 95vw;
         height: 30vh;
-        border: solid black;
         border-radius: 2vw;
         display: flex;
         flex-direction: row;
@@ -153,7 +148,6 @@ body {
         width: 45%;
         height: 90%;
         color: white;
-        border: solid black 1px;
         border-radius: 3vw;
         font-size: 6vw;
 
@@ -166,7 +160,6 @@ body {
         justify-content: center;
         align-items: center;
         color: white;
-        background-color: black;
         position: fixed;
         top: 0;
         left: 0;
